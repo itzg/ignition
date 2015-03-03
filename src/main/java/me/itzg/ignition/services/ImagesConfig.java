@@ -1,6 +1,8 @@
 package me.itzg.ignition.services;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -18,6 +20,11 @@ public class ImagesConfig extends WebMvcConfigurerAdapter {
 
     @NotNull
     private File baseDirectory;
+
+    @Bean
+    public File imagesBaseDirectory() {
+        return baseDirectory;
+    }
 
     public void setBaseDir(String dir) {
         File asFile = new File(dir);

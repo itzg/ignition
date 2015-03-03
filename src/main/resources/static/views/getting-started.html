@@ -1,0 +1,9 @@
+<div>
+    <h2>Pull Latest CoreOS Images</h2>
+    <div>
+    Channel: <select ng-options="c for c in channels" ng-model="channel"/>
+    </div>
+    <div>
+        <input class="btn btn-default" type="button" value="Pull" ng-click="pull('coreos')">
+    </div>
+</div>

@@ -18,8 +18,8 @@ import java.util.concurrent.TimeoutException;
  * @since 3/1/2015
  */
 @RestController
-@RequestMapping("/machines")
-public class MachinesController {
+@RequestMapping("/config/machines")
+public class ConfigMachinesController {
 
     @Autowired
     private MachinesService machinesService;

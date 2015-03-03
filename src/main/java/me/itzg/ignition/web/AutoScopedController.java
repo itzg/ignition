@@ -32,6 +32,7 @@ import java.util.concurrent.TimeoutException;
  * @since 2/28/2015
  */
 @RestController
+@RequestMapping("/auto")
 public class AutoScopedController {
     private static Logger LOG = LoggerFactory.getLogger(AutoScopedController.class);
 

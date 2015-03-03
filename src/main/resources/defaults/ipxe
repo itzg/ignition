@@ -1,0 +1,6 @@
+#!ipxe
+
+set base-url ${ignitionBaseUrl}/images/coreos/amd64/stable
+kernel ${r"${base-url}"}/coreos_production_pxe.vmlinuz<#if sshKey??> sshkey="${sshKey}"</#if>
+initrd ${r"${base-url}"}/coreos_production_pxe_image.cpio.gz
+boot

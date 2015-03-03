@@ -21,4 +21,6 @@ public class IgnitionConstants {
 
     public static final String TEMPLATE_SCHEME_MACHINE = "machine";
     public static final Joiner PATH_JOINER = Joiner.on('/');
+    public static final String ARCH_AMD64 = "amd64";
+    public static final String IMAGES_DIR_COREOS = "coreos";
 }
