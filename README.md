@@ -1,5 +1,7 @@
 # ignition
 
+Build: [![Circle CI](https://circleci.com/gh/itzg/ignition.svg?style=svg)](https://circleci.com/gh/itzg/ignition)
+
 Gets your iPXE and cloud-config'ed clusters up and running in no time.
 
 ## Getting Started
