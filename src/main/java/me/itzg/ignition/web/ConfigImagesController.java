@@ -1,6 +1,7 @@
 package me.itzg.ignition.web;
 
 import com.google.common.base.Preconditions;
+import me.itzg.ignition.services.ImagesProperties;
 import me.itzg.ignition.services.ImagesService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,6 +29,9 @@ public class ConfigImagesController {
     @Autowired
     private ImagesService imagesService;
 
+    @Autowired
+    private ImagesProperties imagesProperties;
+
     @RequestMapping(method = RequestMethod.GET)
     public String[] getSupportedDistributions() {
         return SUPPORTED_DISTRIBUTIONS;
@@ -35,13 +39,6 @@ public class ConfigImagesController {
 
     @RequestMapping(value="/coreos", method = RequestMethod.GET)
     public Collection<String> getCoreOSChannels() {
-        return COREOS_CHANNELS;
-    }
-
-    @RequestMapping(value="/coreos/{channel}", method = RequestMethod.POST)
-    public void pullImagesCoreOS(
-            @PathVariable String channel) {
-        Preconditions.checkArgument(COREOS_CHANNELS.contains(channel), "Invalid CoreOS channel: "+channel);
-        imagesService.pullImageCoreOS(channel);
+        return imagesProperties.getCoreOS().getChannels();
     }
 }

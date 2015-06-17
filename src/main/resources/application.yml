@@ -1,0 +1,25 @@
+# Configurable bits
+server.port: 8080
+
+ignition:
+  etcd.machines:
+    - http://localhost:4001
+
+  images:
+    baseDirectory: images
+    downloadConcurrency: 2
+    checkInterval: 240
+
+    coreOS:
+      channels:
+        - stable
+        - beta
+        - alpha
+
+# Spring tuning, not really configurable
+
+logging.level:
+  me.itzg.ignition.services.DownloadService: DEBUG
+
+# Turn off Boot's auto Freemarker loading logic
+spring.freemarker.checkTemplateLocation: false
