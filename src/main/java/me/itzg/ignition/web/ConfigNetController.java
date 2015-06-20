@@ -5,7 +5,7 @@ import me.itzg.ignition.common.DatastoreException;
 import me.itzg.ignition.common.IgnitionException;
 import me.itzg.ignition.common.IpPoolDeclaration;
 import me.itzg.ignition.common.NetAllocation;
-import me.itzg.ignition.etcd.EtcdException;
+import me.itzg.etcd.EtcdException;
 import me.itzg.ignition.services.ConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;

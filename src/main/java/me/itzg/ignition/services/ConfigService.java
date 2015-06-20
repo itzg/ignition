@@ -2,9 +2,9 @@ package me.itzg.ignition.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import me.itzg.ignition.common.*;
-import me.itzg.ignition.etcd.EtcdException;
-import me.itzg.ignition.etcd.EtcdUtils;
-import me.itzg.ignition.etcd.keys.Node;
+import me.itzg.etcd.EtcdException;
+import me.itzg.etcd.EtcdUtils;
+import me.itzg.etcd.keys.Node;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

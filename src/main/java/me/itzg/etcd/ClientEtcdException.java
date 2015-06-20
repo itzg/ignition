@@ -1,6 +1,6 @@
-package me.itzg.ignition.etcd;
+package me.itzg.etcd;
 
-import me.itzg.ignition.etcd.keys.Response;
+import me.itzg.etcd.keys.Response;
 
 /**
  * @author Geoff Bourne

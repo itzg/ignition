@@ -1,4 +1,4 @@
-package me.itzg.ignition.etcd.keys;
+package me.itzg.etcd.keys;
 
 import java.util.Date;
 import java.util.List;

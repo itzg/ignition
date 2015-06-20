@@ -1,4 +1,4 @@
-package me.itzg.ignition.etcd;
+package me.itzg.etcd;
 
 /**
  * @author Geoff Bourne

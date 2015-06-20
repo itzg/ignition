@@ -2,7 +2,7 @@ package me.itzg.ignition.web;
 
 import me.itzg.ignition.common.IgnitionException;
 import me.itzg.ignition.common.NodeAssignment;
-import me.itzg.ignition.etcd.EtcdException;
+import me.itzg.etcd.EtcdException;
 import me.itzg.ignition.services.ConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;

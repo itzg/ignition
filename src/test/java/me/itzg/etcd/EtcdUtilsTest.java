@@ -1,6 +1,6 @@
-package me.itzg.ignition.etcd;
+package me.itzg.etcd;
 
-import me.itzg.ignition.etcd.keys.Node;
+import me.itzg.etcd.keys.Node;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

@@ -1,6 +1,4 @@
-package me.itzg.ignition.etcd;
-
-import me.itzg.ignition.services.EtcdProperties;
+package me.itzg.etcd;
 
 /**
  * @author Geoff Bourne

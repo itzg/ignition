@@ -1,6 +1,5 @@
 package me.itzg.ignition.services;
 
-import me.itzg.ignition.etcd.keys.Node;
 import org.junit.Before;
 import org.junit.Test;
 

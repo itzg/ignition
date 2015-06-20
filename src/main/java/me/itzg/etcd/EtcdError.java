@@ -1,4 +1,4 @@
-package me.itzg.ignition.etcd;
+package me.itzg.etcd;
 
 /**
  * Encapsulates <a href="https://github.com/coreos/etcd/blob/master/Documentation/errorcode.md">standard v2 errors</a>

@@ -1,8 +1,8 @@
-package me.itzg.ignition.etcd;
+package me.itzg.etcd;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
-import me.itzg.ignition.etcd.keys.Node;
+import me.itzg.etcd.keys.Node;
 
 import java.util.List;
 

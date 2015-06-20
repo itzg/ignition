@@ -1,6 +1,4 @@
-package me.itzg.ignition.etcd.keys;
-
-import me.itzg.ignition.etcd.keys.Node;
+package me.itzg.etcd.keys;
 
 /**
  * @author Geoff Bourne

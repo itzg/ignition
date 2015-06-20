@@ -4,11 +4,11 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
 import com.google.common.collect.FluentIterable;
 import me.itzg.ignition.IgnitionConstants;
-import me.itzg.ignition.etcd.EtcdError;
-import me.itzg.ignition.etcd.EtcdException;
-import me.itzg.ignition.etcd.NoUsableMachinesException;
-import me.itzg.ignition.etcd.keys.Node;
-import me.itzg.ignition.etcd.keys.Response;
+import me.itzg.etcd.EtcdError;
+import me.itzg.etcd.EtcdException;
+import me.itzg.etcd.NoUsableMachinesException;
+import me.itzg.etcd.keys.Node;
+import me.itzg.etcd.keys.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +31,6 @@ import java.net.ConnectException;
 import java.net.URI;
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 
 /**
  * @author Geoff Bourne
