@@ -44,16 +44,12 @@
             <artifactId>guava</artifactId>
             <version>18.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.mousio</groupId>
-            <artifactId>etcd4j</artifactId>
-            <version>2.7.0</version>
-        </dependency>
 
         <dependency>
-            <groupId>me.itzg</groupId>
-            <artifactId>utils</artifactId>
-            <version>1.1-SNAPSHOT</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
         </dependency>
 
 

@@ -9,7 +9,8 @@ import java.net.URI;
  * @author Geoff Bourne
  * @since 6/16/2015
  */
-@ConfigurationProperties(prefix = "ignition.etcd")
+@Component
+@ConfigurationProperties(merge = false, prefix = "ignition.etcd")
 public class EtcdProperties {
     private URI[] machines;
 

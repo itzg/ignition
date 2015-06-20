@@ -2,8 +2,6 @@
 server.port: 8080
 
 ignition:
-  etcd.machines:
-    - http://localhost:4001
 
   images:
     baseDirectory: images

@@ -26,8 +26,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-import static me.itzg.ignition.IgnitionConstants.PATH_JOINER;
-
 /**
  * @author Geoff Bourne
  * @since 3/1/2015

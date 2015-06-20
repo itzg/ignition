@@ -1,11 +1,14 @@
 package me.itzg.ignition.services;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.base.Joiner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.springframework.core.task.SimpleAsyncTaskExecutor;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.scheduling.TaskScheduler;
@@ -27,6 +30,11 @@ public class IgnitionServicesConfig {
     @Bean
     public File imagesBaseDirectory() {
         return new File(imagesProperties.getBaseDirectory());
+    }
+
+    @Bean @Scope("prototype")
+    public ObjectMapper objectMapper() {
+        return new ObjectMapper();
     }
 
     @Bean
