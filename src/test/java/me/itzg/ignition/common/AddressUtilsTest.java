@@ -44,4 +44,12 @@ public class AddressUtilsTest {
         assertEquals(3, masked[2]);
         assertEquals(0, masked[3]);
     }
+
+    @Test
+    public void testConvertPrefixToMask() throws Exception {
+        assertEquals("255.255.255.0", AddressUtils.convertToSubnetMask(24));
+        assertEquals("255.255.254.0", AddressUtils.convertToSubnetMask(23));
+        assertEquals("240.0.0.0", AddressUtils.convertToSubnetMask(4));
+
+    }
 }

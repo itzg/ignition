@@ -24,6 +24,7 @@ import java.io.File;
  */
 @Configuration
 public class IgnitionServicesConfig {
+    @SuppressWarnings("SpringJavaAutowiringInspection") //TODO remove when fixed in IntelliJ
     @Autowired
     private ImagesProperties imagesProperties;
 

@@ -7,16 +7,9 @@ package me.itzg.ignition.common;
  * @author Geoff Bourne
  * @since 6/17/2015
  */
-public class AlreadyExistsException extends Exception {
+public class AlreadyExistsException extends IgnitionException {
     public AlreadyExistsException(String message) {
         super(message);
     }
 
-    public AlreadyExistsException(String message, Throwable cause) {
-        super(message, cause);
-    }
-
-    public AlreadyExistsException(Throwable cause) {
-        super(cause);
-    }
 }
