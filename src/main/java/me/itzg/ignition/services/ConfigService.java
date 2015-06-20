@@ -1,6 +1,7 @@
 package me.itzg.ignition.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import me.itzg.etcd.EtcdService;
 import me.itzg.ignition.common.*;
 import me.itzg.etcd.EtcdException;
 import me.itzg.etcd.EtcdUtils;
@@ -125,8 +126,10 @@ public class ConfigService {
         withAlloc.copy(nodeAssignment);
         withAlloc.setNetAllocation(netAllocation);
 
-        etcd.putIfNotExists(objectMapper.writeValueAsString(withAlloc),
-                ETCD_BASE, ETCD_NET, ETCD_NODES, nodeAssignment.getId().toString());
+        if (!etcd.putIfNotExists(objectMapper.writeValueAsString(withAlloc),
+                ETCD_BASE, ETCD_NET, ETCD_NODES, nodeAssignment.getId().toString())) {
+            throw new AlreadyExistsException("Node assignment already existed for " + nodeAssignment.getId());
+        }
     }
 
     public void teardownNode(UUID nodeId) throws IOException, EtcdException, IgnitionException {

@@ -2,6 +2,7 @@ package me.itzg.ignition.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Joiner;
+import me.itzg.etcd.EtcdService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -28,6 +29,10 @@ public class IgnitionServicesConfig {
     @Autowired
     private ImagesProperties imagesProperties;
 
+    @SuppressWarnings("SpringJavaAutowiringInspection") //TODO remove when fixed in IntelliJ
+    @Autowired
+    private EtcdProperties etcdProperties;
+
     @Bean
     public File imagesBaseDirectory() {
         return new File(imagesProperties.getBaseDirectory());
@@ -36,6 +41,11 @@ public class IgnitionServicesConfig {
     @Bean @Scope("prototype")
     public ObjectMapper objectMapper() {
         return new ObjectMapper();
+    }
+
+    @Bean
+    public EtcdService etcdService() {
+        return new EtcdService(etcdProperties.getMachines());
     }
 
     @Bean
